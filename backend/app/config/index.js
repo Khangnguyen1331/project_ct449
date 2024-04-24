@@ -6,7 +6,8 @@ const config = {
     port: 8080,
   },
   db: {
-    uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zpliwo8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
+    uri: process.env.MONGODB_URI || "mongodb://127.0.0.1:27017"
+
   },
 };
 
